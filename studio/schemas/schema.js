@@ -15,7 +15,7 @@ export default createSchema({
       name: "users",
       title: "Users",
       type: "document",
-      field: [
+      fields: [
         {
           name: "userName",
           title: "User Name",
@@ -41,7 +41,7 @@ export default createSchema({
       name: "marketItems",
       title: "Market Items",
       type: "document",
-      field: [
+      fields: [
         {
           name: "title",
           title: "Title",

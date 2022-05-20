@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@media (min-width: 1024px) {
+    .smallScreen-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .largeScreen-nav {
+        display: none;
+    }
+}
