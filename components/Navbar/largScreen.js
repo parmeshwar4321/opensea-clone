@@ -7,7 +7,7 @@ import { CgProfile } from 'react-icons/cg'
 import { MdOutlineAccountBalanceWallet } from 'react-icons/md'
 
 const style = {
-  wrapper: `bg-[#04111d] w-screen px-[1.2rem] py-[0.8rem] flex `,
+  wrapper: `bg-[#04111d] w-full px-[1.2rem] py-[0.8rem] flex `,
   logoContainer: `flex items-center cursor-pointer`,
   logoText: ` ml-[0.8rem] text-white font-semibold text-2xl`,
   searchBar: `flex flex-1 mx-[0.8rem] w-max-[520px] items-center bg-[#363840] rounded-[0.8rem] hover:bg-[#4c505c]`,
@@ -43,6 +43,36 @@ const LargeScreen = () => {
         <div className={style.headerItem}> Stats </div>
         <div className={style.headerItem}> Resources </div>
         <div className={style.headerItem}> Create </div>
+        <div className="group inline-block relative">
+          <div
+            className="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center"
+          >
+            <span class="mr-1">Dropdown</span>
+          </div>
+          <ul className="absolute hidden text-gray-700 pt-1 group-hover:block">
+            <li className="">
+              <a
+                className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                href="#"
+              >One</a
+              >
+            </li>
+            <li className="">
+              <a
+                className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                href="#"
+              >Two</a
+              >
+            </li>
+            <li className="">
+              <a
+                className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                href="#"
+              >Three is the magic number</a
+              >
+            </li>
+          </ul>
+        </div>
         <div className={style.headerIcon}>
           <CgProfile />
         </div>

@@ -35,7 +35,12 @@ export default createSchema({
           name: "bannerImage",
           title: "Banner Image",
           type: "image",
-        }
+        },
+        {
+          name: 'twitterHandle',
+          title: 'Twitter Handle',
+          type: 'string',
+        },
       ]
     }, {
       name: "marketItems",
@@ -69,21 +74,26 @@ export default createSchema({
           type: "number",
         },
         {
-          name: "owners",
-          title: "Owners",
-          type: "array",
-          of: [{ type: "reference", to: [{ type: "users" }] }]
-        },
-        {
           name: "floorPrice",
           title: "Floor Price",
           type: "number",
+        },
+        {
+          name: 'owners',
+          title: 'Owners',
+          type: 'array',
+          of: [{ type: 'reference', to: [{ type: 'users' }] }],
         },
         {
           name: "profileImage",
           title: "Profile Image",
           type: "image",
         },
+        {
+          name: 'bannerImage',
+          title: 'Banner Image',
+          type: 'image',
+        }
 
       ]
     }

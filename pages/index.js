@@ -1,6 +1,6 @@
 import { useWeb3 } from '@3rdweb/hooks'
+import Hero from '../components/Hero'
 import Head from 'next/head'
-import Image from 'next/image'
 import { useEffect } from 'react'
 import { client } from '../lib/sanityClient'
 import toast, { Toaster } from 'react-hot-toast'
@@ -44,11 +44,13 @@ export default function Home() {
       <Toaster position="top-center" reverseOrder={false} />
 
       {address ? (
-        <h1>this is home</h1>
+        <>
+          <Hero />
+        </>
+
       ) : (
         <div className={style.walletConnectWrapper}>
-          <button className={style.button} onClick={() => connectWallet('injected')}
-          >connect wallet</button>
+          <button className={style.button} onClick={() => connectWallet('injected')} >connect wallet</button>
           <div className={style.details}>
             need to log in
           </div>
